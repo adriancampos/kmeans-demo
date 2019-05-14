@@ -49,10 +49,6 @@ function findcenter() {
     });
 
     
-    // Color all points black
-    document.getElementById('points').childNodes.forEach(function(point) {
-        point.setAttribute("fill", "black");
-    });
 
 
 }
