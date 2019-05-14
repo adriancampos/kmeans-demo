@@ -1,0 +1,46 @@
+<head>
+
+    <style>
+        body {
+            display: flex;
+
+        }
+
+        .canvas {
+            flex: 1;
+        }
+
+        /* TODO: Neaten up css */
+
+        .panel {
+            flex: .25;
+            border-left: gray 1px solid;
+            padding-left: 48px;
+        }
+
+        #centroids circle {
+            transition: cx 1000ms ease, cy 1000ms ease;
+        }
+
+        #points circle {
+            transition: fill 200ms ease;
+        }
+    </style>
+
+    <script type="text/javascript" src="kmeans.js"></script>
+
+</head>
+
+<body>
+    <svg class="canvas" id="canvas">
+        <g id="points"></g>
+        <g id="centroids"></g>
+    </svg>
+    <div class="panel" id="panel">
+        <button id="calculate" onclick="calculate()">calculate</button>
+        <button id="update" onclick="findcenter()">update</button>
+
+        <button id="new_points" onclick="new_points()">new points</button>
+        <button id="new_centroids" onclick="new_centroids()">new centroids</button>
+    </div>
+</body>
