@@ -85,6 +85,8 @@ function new_points() {
 
         points.appendChild(point);
     }
+
+    fixSVG();
 }
 
 function new_centroids() {
@@ -108,6 +110,12 @@ function new_centroids() {
 
         centroids.append(centroid);
     }
+
+    fixSVG();    
+}
+
+function fixSVG() {
+    document.getElementById('canvas').innerHTML = document.getElementById('canvas').innerHTML;
 }
 
 let canvas_width;
